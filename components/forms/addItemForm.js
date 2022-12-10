@@ -2,8 +2,8 @@ import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
 const addItemForm = (obj = {}) => {
-    clearDom();
-    const domString = `
+  clearDom();
+  const domString = `
     <form id="${obj.firebaseKey ? `update-item--${obj.firebaseKey}` : 'submit-item'}" class="mb-4">
     <div class="form-group">
         <label for="title">Item Name</label>
@@ -21,7 +21,7 @@ const addItemForm = (obj = {}) => {
     </button>
     </form>
     `;
-    renderToDOM('#form-container', domString);
+  renderToDOM('#form-container', domString);
 };
 
 export default addItemForm;

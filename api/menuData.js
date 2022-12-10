@@ -11,10 +11,10 @@ const getMenuNames = () => new Promise((resolve, reject) => {
   })
     .then((response) => response.json())
     .then((data) => resolve(Object.values(data)))
-    .catch(reject)
+    .catch(reject);
 });
 
-const getSingleMenuName = () => new Promise((resolve, reject) => {
+const getSingleMenuName = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
@@ -25,11 +25,11 @@ const getSingleMenuName = () => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
-const deleteMenuName = () => new Promise ((resolve, reject) => {
+const deleteMenuName = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
@@ -37,11 +37,11 @@ const deleteMenuName = () => new Promise ((resolve, reject) => {
     .catch(reject);
 });
 
-const createMenuName = () => new Promise ((resolve, reject) => {
+const createMenuName = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
@@ -49,13 +49,13 @@ const createMenuName = () => new Promise ((resolve, reject) => {
     .catch(reject);
 });
 
-const updateMenuName = () => new Promise ((resolve, reject) => {
-  fetch(`${endpoint}/menu/${firebaseKey}.json`, {
+const updateMenuName = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/menu/${payload.firebaseKey}.json`, {
     method: 'PATCH',
     headers: {
-      'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
-    body:JSON.stringify(payload)
+    body: JSON.stringify(payload)
   })
     .then((response) => response.json())
     .then((data) => resolve(data))

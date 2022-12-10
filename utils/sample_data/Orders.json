@@ -1,61 +1,67 @@
 {
-	"-NIeAhPA5oAUDb5ZTJ4F": {
-		"firebaseKey": null,
-		"order_name": "Maurice Carlo",
-		"phone_number": "(244) 4655246",
-		"email": "mcarlo0@nature.com",
-		"order_type": "Filipino",
-		"item_name": "Maurice",
-		"item_price": "$62.65",
-		"payment_type": null,
-		"tip_amount": "$14.08",
-		"uid":""
-	},
-	"-NIeAhPDVSFNmj1fV2pt": {
-		"firebaseKey": null,
-		"order_name": "Bernice Cossentine",
-		"phone_number": "(462) 4060752",
-		"email": "bcossentine1@businesswire.com",
-		"order_type": "Pashto",
-		"item_name": "Bernice",
-		"item_price": "$42.04",
-		"payment_type": null,
-		"tip_amount": "$13.88"
-	},
-	"-NIeAhPHmWseKoH-tXhY": {
-		"firebaseKey": null,
-		"order_name": "Jacquette Postill",
-		"phone_number": "(454) 3976605",
-		"email": "jpostill2@cdc.gov",
-		"order_type": "Kannada",
-		"item_name": "Jacquette",
-		"item_price": "$59.81",
-		"payment_type": null,
-		"tip_amount": "$8.85",
-		"uid":""
-	},
-	"-NIeAhPK2yJcKWWJvj2s": {
-		"firebaseKey": null,
-		"order_name": "Rowe Rontree",
-		"phone_number": "(278) 5179809",
-		"email": "rrontree3@meetup.com",
-		"order_type": "French",
-		"item_name": "Rowe",
-		"item_price": "$8.16",
-		"payment_type": null,
-		"tip_amount": "$8.05",
-		"uid":""
-	},
-	"-NIeAhPPpi_0AtyuoCFR": {
-		"firebaseKey": null,
-		"order_name": "Coreen Lewcock",
-		"phone_number": "(477) 5110147",
-		"email": "clewcock4@blinklist.com",
-		"order_type": "Dhivehi",
-		"item_name": "Coreen",
-		"item_price": "$24.15",
-		"payment_type": null,
-		"tip_amount": "$18.57",
-		"uid":""
-	}
+"-NIeAhPA5oAUDb5ZTJ4F": {
+  "firebaseKey": "-NIeAhPA5oAUDb5ZTJ4F",
+  "order_name": "Maurice Carlo",
+  "phone_number": "(244) 4655246",
+  "email": "mcarlo0@nature.com",
+  "order_type": "Filipino",
+  "item_name": "Maurice",
+  "order_total": "",
+  "payment_type": "",
+  "tip_amount": "$14.08",
+  "uid":"",
+  "isFulfilled": "true"
+},
+"-NIeAhPDVSFNmj1fV2pt": {
+  "firebaseKey": "-NIeAhPDVSFNmj1fV2pt",
+  "order_name": "Bernice Cossentine",
+  "phone_number": "(462) 4060752",
+  "email": "bcossentine1@businesswire.com",
+  "order_type": "Pashto",
+  "item_name": "Bernice",
+  "order_total": "",
+  "payment_type": "",
+  "tip_amount": "$13.88",
+  "uid":"",
+  "isFulfilled": "false"
+},
+"-NIeAhPHmWseKoH-tXhY": {
+  "firebaseKey": "-NIeAhPHmWseKoH-tXhY",
+  "order_name": "Jacquette Postill",
+  "phone_number": "(454) 3976605",
+  "email": "jpostill2@cdc.gov",
+  "order_type": "Kannada",
+  "item_name": "Jacquette",
+  "order_total": "",
+  "payment_type": "",
+  "tip_amount": "$8.85",
+  "uid":"",
+  "isFulfilled": "true"
+},
+"-NIeAhPK2yJcKWWJvj2s": {
+  "firebaseKey": "-NIeAhPK2yJcKWWJvj2s",
+  "order_name": "Rowe Rontree",
+  "phone_number": "(278) 5179809",
+  "email": "rrontree3@meetup.com",
+  "order_type": "French",
+  "item_name": "Rowe",
+  "order_total": "",
+  "payment_type": "",
+  "tip_amount": "$8.05",
+  "uid":"",
+  "isFulfilled": "false"
+},
+"-NIeAhPPpi_0AtyuoCFR": {
+  "firebaseKey": "-NIeAhPPpi_0AtyuoCFR",
+  "order_name": "Coreen Lewcock",
+  "phone_number": "(477) 5110147",
+  "email": "clewcock4@blinklist.com",
+  "order_type": "Dhivehi",
+  "item_name": "Coreen",
+  "order_total": "",
+  "payment_type": "",
+  "tip_amount": "$18.57",
+  "uid":"",
+  "isFulfilled": "false"
+}
 }

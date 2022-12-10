@@ -14,7 +14,7 @@ const getMenuNames = () => new Promise((resolve, reject) => {
     .catch(reject)
 });
 
-const getSingleMenuName = () => new Promise((resolve, reject) => {
+const getSingleMenuName = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
@@ -25,7 +25,7 @@ const getSingleMenuName = () => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
-const deleteMenuName = () => new Promise ((resolve, reject) => {
+const deleteMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
@@ -37,7 +37,7 @@ const deleteMenuName = () => new Promise ((resolve, reject) => {
   .catch(reject);
 });
 
-const createMenuName = () => new Promise ((resolve, reject) => {
+const createMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
@@ -49,7 +49,7 @@ const createMenuName = () => new Promise ((resolve, reject) => {
   .catch(reject);
 });
 
-const updateMenuName = () => new Promise ((resolve, reject) => {
+const updateMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
    method: 'PATCH',
    headers: {

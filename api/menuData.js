@@ -51,7 +51,7 @@ const createMenuName = () => new Promise ((resolve, reject) => {
 
 const updateMenuName = () => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
-   method: 'DELETE',
+   method: 'PATCH',
    headers: {
     'Content-Type': 'application/json', 
   },

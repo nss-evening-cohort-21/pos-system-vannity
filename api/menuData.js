@@ -6,50 +6,50 @@ const getMenuNames = () => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu.json`, {
     method: 'GET',
     headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
     .then((data) => resolve(Object.values(data)))
-    .catch(reject)
+    .catch(reject);
 });
 
 const getSingleMenuName = (firebaseKey) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
-       'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
     },
   })
     .then((response) => response.json())
     .then((data) => resolve(data))
     .catch(reject);
 });
-const deleteMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
+const deleteMenuName = () => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
-       'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
   })
-  .then((response) => response.json())
-  .then((data) => resolve(data))
-  .catch(reject);
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
 });
 
-const createMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
+const createMenuName = () => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
-       'Content-Type': 'application/json', 
+      'Content-Type': 'application/json',
     },
   })
-  .then((response) => response.json())
-  .then((data) => resolve(data))
-  .catch(reject);
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
 });
 
-const updateMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
+const updateMenuName = () => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
    method: 'PATCH',
    headers: {
@@ -68,4 +68,4 @@ export {
   deleteMenuName,
   createMenuName,
   updateMenuName,
-}
+};

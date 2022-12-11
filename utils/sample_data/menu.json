@@ -1,7 +1,7 @@
 {
   "-NIjM-alzZfENRJ7g-L8": {
     "item_id": "-NIjM-alzZfENRJ7g-L8",
-    "menu_item": "Maurice",
+    "name": "Maurice",
     "price": 20.00,
     "description": "Hefty but soft, creamy pasta delight.",
     "uid":"",
@@ -9,7 +9,7 @@
   },
   "-NIjM-anwM6zFWd8gL4p": {
     "item_id": "-NIjM-anwM6zFWd8gL4p",
-    "menu_item": "Death Bite",
+    "name": "Death Bite",
     "price": 17.00,
     "description": "The spiciest pizza you'll ever have! All the seasoning!",
     "uid":"",
@@ -17,7 +17,7 @@
   },
   "-NIjM-aoq7gdGJWpQalq": {
     "item_id": "-NIjM-aoq7gdGJWpQalq",
-    "menu_item": "Bernice",
+    "name": "Bernice",
     "price": 13.00,
     "description": "She's your basic chicken cob salad, but we love her!",
     "uid":"",
@@ -25,7 +25,7 @@
   },
   "-NIjM-aqc3gK57FGRiJZ": {
     "item_id": "-NIjM-aqc3gK57FGRiJZ",
-    "menu_item": "Jacquette",
+    "name": "Jacquette",
     "price": 9.00,
     "description": "A special combo of our fried chicken skin over potato skins.",
     "uid":"",
@@ -33,7 +33,7 @@
   },
   "-NIjM-asT2asFCdb4K4n": {
     "item_id": "-NIjM-asT2asFCdb4K4n",
-    "menu_item": "Rowe",
+    "name": "Rowe",
     "price": 8.00,
     "description": "Fried pickles with dill ranch sauce. For the bros!",
     "uid":"",
@@ -41,7 +41,7 @@
   },
   "-NIjM-auy3QGSetrEJnD": {
     "item_id": "-NIjM-auy3QGSetrEJnD",
-    "menu_item": "Coreen",
+    "name": "Coreen",
     "price": 12.00,
     "description": "One giant skillet cookie a la mode.",
     "uid":"",
@@ -49,7 +49,7 @@
   },
   "-NIjM-awuj2GpTYLg6vu": {
     "item_id": "-NIjM-awuj2GpTYLg6vu",
-    "menu_item": "The Don",
+    "name": "The Don",
     "price": 18.00,
     "description": "A pizza with every topping imaginable!",
     "uid":"",
@@ -57,7 +57,7 @@
   },
   "-NIjM-azxe2mY2FQ_Yeh": {
     "item_id": "-NIjM-azxe2mY2FQ_Yeh",
-    "menu_item": "Mud Pie",
+    "name": "Mud Pie",
     "price": 10.00,
     "description": "A mountain of Fritos, chilli, cheese, etc.",
     "uid":"",
@@ -65,7 +65,7 @@
   },
   "-NIjM-b0Gep1txQGY7fa": {
     "item_id": "-NIjM-b0Gep1txQGY7fa",
-    "menu_item": "The Informant",
+    "name": "The Informant",
     "price": 15.00,
     "description": "Gluten free and veggie option for THOSE people.",
     "uid":"",
@@ -73,7 +73,7 @@
   },
   "-NIjM-b1FCbKH5_NkmNK": {
     "item_id": "-NIjM-b1FCbKH5_NkmNK",
-    "menu_item": "The Golden Goose",
+    "name": "The Golden Goose",
     "price": 30.00,
     "description": "Our one drink special include 5 shots for you and your friends.",
     "uid":"",

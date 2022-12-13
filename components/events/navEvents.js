@@ -1,5 +1,6 @@
 import { getOrders } from '../../api/orderData';
 import { signOut } from '../../utils/auth';
+import addOrderForm from '../forms/addOrderForm';
 
 // navigation events
 const navigationEvents = () => {
@@ -11,6 +12,12 @@ const navigationEvents = () => {
   document.querySelector('#view-orders')
     .addEventListener('click', () => {
       getOrders();
+    });
+
+  // Create Order
+  document.querySelector('#create-order')
+    .addEventListener('click', () => {
+      addOrderForm();
     });
 };
 

@@ -3,7 +3,7 @@ import client from '../utils/client';
 const endpoint = client.databaseURL;
 
 const getOrders = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/order.json`, {
+  fetch(`${endpoint}/orders.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -15,7 +15,7 @@ const getOrders = () => new Promise((resolve, reject) => {
 });
 
 const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/order/${firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -26,7 +26,7 @@ const getSingleOrder = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 const deleteOrder = (firebaseKey) => new Promise ((resolve, reject) => {
-  fetch(`${endpoint}/order/${firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ const deleteOrder = (firebaseKey) => new Promise ((resolve, reject) => {
 });
 
 const createOrder = (payload) => new Promise ((resolve, reject) => {
-  fetch(`${endpoint}/order.json`, {
+  fetch(`${endpoint}/orders.json`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const createOrder = (payload) => new Promise ((resolve, reject) => {
 });
 
 const updateOrder = (payload) => new Promise ((resolve, reject) => {
-  fetch(`${endpoint}/order/${payload.firebaseKey}.json`, {
+  fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
    method: 'PATCH',
    headers: {
     'Content-Type': 'application/json', 

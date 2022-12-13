@@ -1,26 +1,29 @@
+import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
-import renderToDOM from '../../utils/renderToDom';
+import selectOrderType from './selectOrderType';
 
 const createOrderForm = (obj = {}) => {
   clearDom();
-  const domString = `
-    <form id="${obj.firebaseKey ? `update-language--${obj.firebaseKey}` : 'submit-author'}" class="mb-4">
+  const domString = `<form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : 'create-order'}" class="mb-4">
       <div class="form-group">
-        <label for="image">Language</label>
-        <input type="text" class="form-control" id="first_name" placeholder="Language" value="${obj.language || ''}" required>
+        <label for="image">Order Name</label>
+        <input type="text" class="form-control" id="order_name" placeholder="Order Name" value="${obj.order_name || ''}" required>
       </div>
       <div class="form-group">
-      <label for="description">Description</label>
-      <textarea class="form-control" placeholder="Description" id="description" style="height: 100px">${obj.description || ''}</textarea>
+        <label for="image"></label>
+        <input type="number" class="form-control" id="phone_number" placeholder="###-###-####" value="${obj.phone_number || ''}"required>
       </div>
-      <div class="form-check">
-      <input type="checkbox" class="form-check-input" id="favoriteLanguage" ${obj.favorite ? 'checked' : ''}>
-      <label class="form-check-label" for="favorite">Favorite?</label>
+      <div class="form-group">
+        <label for="title">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" value="${obj.email || ''}"required>
       </div>
-      <button type="submit" class="btn btn-primary mt-3">Submit Language</button>
+      <div class="form-group" id="select-ordertype">
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
-  renderToDOM('#form-container', domString);
+  renderToDom('#form-container', domString);
+  selectOrderType(`${obj.order_type || ''}`);
 };
 
 export default createOrderForm;

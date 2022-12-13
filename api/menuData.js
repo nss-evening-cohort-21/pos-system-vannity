@@ -25,7 +25,9 @@ const getSingleMenuName = (firebaseKey) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
+
 const deleteMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
+
   fetch(`${endpoint}/menu/${firebaseKey}.json`, {
     method: 'DELETE',
     headers: {
@@ -37,9 +39,11 @@ const deleteMenuName = (firebaseKey) => new Promise ((resolve, reject) => {
     .catch(reject);
 });
 
+
 const createMenuName = () => new Promise ((resolve, reject) => {
   fetch(`${endpoint}/menu.json`, {
     method: 'POST',
+
     headers: {
       'Content-Type': 'application/json',
     },

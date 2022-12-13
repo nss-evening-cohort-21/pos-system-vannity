@@ -1,12 +1,12 @@
 import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
-import selectOrderType from '../forms/selectOrderType'
+import selectOrderType from '../..forms/selectOrderType'
 
 // Use this From for both Create/Update
 
 const addOrderForm = (obj = {}) => {
-	clearDom();
-	const domString = `<form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : "create-order"}" class="mb-4">
+  clearDom();
+  const domString = `<form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : 'create-order'}" class="mb-4">
       <div class="form-group">
         <label for="image">Order Name</label>
         <input type="text" class="form-control" id="order_name" placeholder="Order Name" value="${obj.order_name || ""}" required>
@@ -24,8 +24,8 @@ const addOrderForm = (obj = {}) => {
       <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
-	renderToDom("#form-container", domString);
-   selectOrderType(`${obj.order_type || ""}`);
+  renderToDom('#form-container', domString);
+  selectOrderType(`${obj.order_type || ''}`);
 };
 
 export default addOrderForm;

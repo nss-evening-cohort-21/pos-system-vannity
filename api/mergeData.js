@@ -1,4 +1,4 @@
-import { getSingleOrder, deleteOrder, getOrderMenuName } from './orderData';
+import { getSingleOrder, deleteOrder, getOrderItems } from './orderData';
 import { getSingleMenuName, deleteMenuName } from './menuData';
 
 const getMenuNameDetails = (firebaseKey) => new Promise((resolve, reject) => {
@@ -10,13 +10,13 @@ const getMenuNameDetails = (firebaseKey) => new Promise((resolve, reject) => {
 
 const getOrderDetails = (firebaseKey) => new Promise((resolve, reject) => {
   getSingleOrder(firebaseKey).then((orderObject) => {
-    getOrderMenuName(firebaseKey)
+    getOrderItems(firebaseKey)
       .then((menuNameArray) => resolve({ ...orderObject, menuNameArray }));
   }).catch(reject);
 });
 
 const deleteOrderMenuNameRelationship = (firebaseKey) => new Promise((resolve, reject) => {
-  getOrderMenuName(firebaseKey).then((orderMenuNameArray) => {
+  getOrderItems(firebaseKey).then((orderMenuNameArray) => {
     const deleteMenuNamePromises = orderMenuNameArray.map((menuName) => deleteMenuName(menuName.firebaseKey));
 
     Promise.all(deleteMenuNamePromises).then(() => {
@@ -25,4 +25,4 @@ const deleteOrderMenuNameRelationship = (firebaseKey) => new Promise((resolve, r
   }).catch(reject);
 });
 
-export { getOrderDetails, getMenuNameDetails, deleteOrderMenuNameRelationship };
+export { getOrderDetails, getMenuNameDetails, deleteOrderMenuNameRelationship }

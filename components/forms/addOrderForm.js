@@ -1,6 +1,6 @@
 import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
-import selectOrderType from '../forms/selectOrderType'
+import selectOrderType from './selectOrderType';
 
 // Use this From for both Create/Update
 

@@ -11,6 +11,10 @@ const navBar = () => {
         <div class="collapse navbar-collapse" id="navbarText">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item active">
+              <a class="nav-link" href="#" id="home">Home<span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
               <a class="nav-link" href="#" id="view-orders">View Orders<span class="sr-only">(current)</span>
               </a>
             </li>

@@ -11,7 +11,7 @@ const navigationEvents = () => {
   // View Orders
   document.querySelector('#view-orders')
     .addEventListener('click', () => {
-      getOrders();
+      getOrders().then();
     });
 
   // Create Order

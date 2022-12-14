@@ -82,8 +82,4 @@ export {
   deleteOrder,
   updateOrder,
   getOrderItems
-<<<<<<< HEAD
 };
-=======
-}
->>>>>>> main

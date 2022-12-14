@@ -1,10 +1,11 @@
 import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
-const emptyOrders = () => {
-  const domString = '<h1>No Orders</h1>';
+const emptyVocab = () => {
+  const domString = '<h1>No Vocab</h1>';
   renderToDOM('#store', domString);
 };
+
 const viewOrders = (obj) => {
   clearDom();
 
@@ -27,4 +28,4 @@ const viewOrders = (obj) => {
   renderToDOM('#view', domString);
 };
 
-export { emptyOrders, viewOrders };
+export { emptyVocab, viewOrders };

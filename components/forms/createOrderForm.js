@@ -1,10 +1,8 @@
-import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
+import renderToDOM from '../../utils/renderToDom';
 import selectOrderType from './selectOrderType';
 
-// Use this From for both Create/Update
-
-const addOrderForm = (obj = {}) => {
+const createOrderForm = (obj = {}) => {
   clearDom();
   const domString = `<form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : 'create-order'}" class="mb-4">
       <div class="form-group">
@@ -24,8 +22,8 @@ const addOrderForm = (obj = {}) => {
       <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
-  renderToDom('#form-container', domString);
+  renderToDOM('#form-container', domString);
   selectOrderType(`${obj.order_type || ''}`);
 };
 
-export default addOrderForm;
+export default createOrderForm;

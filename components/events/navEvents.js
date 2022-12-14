@@ -1,6 +1,6 @@
 import { getOrders } from '../../api/orderData';
+import { emptyOrders, viewOrders } from '../../pages/viewOrders';
 import { signOut } from '../../utils/auth';
-import addOrderForm from '../forms/addOrderForm';
 
 // navigation events
 const navigationEvents = () => {
@@ -8,17 +8,25 @@ const navigationEvents = () => {
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
-  // View Orders
-  document.querySelector('#view-orders')
-    .addEventListener('click', () => {
-      getOrders().then();
+  document.querySelector('#home-view-orders').addEventListener('click', () => {
+    getOrders().then((menuNameArray) => {
+      if (menuNameArray.length) {
+        viewOrders(menuNameArray);
+      } else {
+        emptyOrders();
+      }
     });
+  });
 
-  // Create Order
-  document.querySelector('#create-order')
-    .addEventListener('click', () => {
-      addOrderForm();
+  document.querySelector('#view-orders').addEventListener('click', () => {
+    getOrders().then((menuNameArray) => {
+      if (menuNameArray.length) {
+        viewOrders(menuNameArray);
+      } else {
+        emptyOrders();
+      }
     });
+  });
 };
 
 export default navigationEvents;

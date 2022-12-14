@@ -52,15 +52,15 @@ const createOrder = (payload) => new Promise((resolve, reject) => {
 
 const updateOrder = (payload) => new Promise((resolve, reject) => {
   fetch(`${endpoint}/orders/${payload.firebaseKey}.json`, {
-   method: 'PATCH',
-   headers: {
-    'Content-Type': 'application/json', 
-  },
-  body:JSON.stringify(payload)
-})
-.then((response) => response.json())
-.then((data) => resolve(data))
-.catch(reject);
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(payload)
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(data))
+    .catch(reject);
 });
 
 const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
@@ -82,4 +82,8 @@ export {
   deleteOrder,
   updateOrder,
   getOrderItems
+<<<<<<< HEAD
+};
+=======
 }
+>>>>>>> main

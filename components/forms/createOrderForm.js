@@ -1,5 +1,5 @@
-import renderToDom from '../../utils/renderToDom';
 import clearDom from '../../utils/clearDom';
+import renderToDOM from '../../utils/renderToDom';
 import selectOrderType from './selectOrderType';
 
 const createOrderForm = (obj = {}) => {
@@ -22,7 +22,7 @@ const createOrderForm = (obj = {}) => {
       <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
-  renderToDom('#form-container', domString);
+  renderToDOM('#form-container', domString);
   selectOrderType(`${obj.order_type || ''}`);
 };
 

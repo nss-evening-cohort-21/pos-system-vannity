@@ -25,4 +25,4 @@ const deleteOrderMenuNameRelationship = (firebaseKey) => new Promise((resolve, r
   }).catch(reject);
 });
 
-export { getOrderDetails, getMenuNameDetails, deleteOrderMenuNameRelationship }
+export { getOrderDetails, getMenuNameDetails, deleteOrderMenuNameRelationship };

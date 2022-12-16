@@ -1,5 +1,5 @@
 import { createOrder, getOrders, updateOrder } from '../../api/orderData';
-import { showOrders } from '../pages/orders.js';
+import showOrders from '../../pages/orders';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -17,7 +17,7 @@ const formEvents = () => {
         // payment_type: '',
         // tip_amount: '',
         uid: '',
-        isFulfilled: 'true',
+        // isFulfilled: 'true',
       };
       createOrder(payload).then(({ name }) => {
         const patchPayLoad = { firebaseKey: name };
@@ -27,7 +27,7 @@ const formEvents = () => {
         });
       });
     }
-    if (e.target.id.includes('update-book')) {
+    if (e.target.id.includes('update-order')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         order_name: document.querySelector('#order_name').value,
@@ -39,7 +39,7 @@ const formEvents = () => {
         // payment_type: '',
         // tip_amount: '',
         uid: '',
-        isFulfilled: 'true',
+        // isFulfilled: 'true',
         firebaseKey,
       };
       updateOrder(payload).then(() => {

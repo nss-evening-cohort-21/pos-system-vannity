@@ -9,7 +9,7 @@ const domEvents = () => {
     }
     if (e.target.id.includes('edit-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
-      getSingleOrder(firebaseKey).then((obj) => createOrderForm(obj));
+      getSingleOrder(firebaseKey).then((item) => createOrderForm(item));
     }
   });
 

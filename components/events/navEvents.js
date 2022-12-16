@@ -1,5 +1,6 @@
 import { getOrders } from '../../api/orderData';
-import { emptyOrders, viewOrders } from '../../pages/viewOrders';
+import showOrders from '../../pages/orders';
+import { emptyOrders } from '../../pages/viewOrders';
 import { signOut } from '../../utils/auth';
 import createOrderForm from '../forms/createOrderForm';
 import domBuilder from '../shared/domBuilder';
@@ -27,7 +28,7 @@ const navigationEvents = () => {
   document.querySelector('#view-orders').addEventListener('click', () => {
     getOrders().then((menuNameArray) => {
       if (menuNameArray.length) {
-        viewOrders(menuNameArray);
+        showOrders(menuNameArray);
       } else {
         emptyOrders();
       }

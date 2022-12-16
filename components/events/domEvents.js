@@ -1,5 +1,5 @@
 import createOrderForm from '../forms/createOrderForm';
-import { deleteOrder, getOrders } from '../../api/orderData';
+import { deleteOrder, getOrders, getSingleOrder } from '../../api/orderData';
 import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
 
@@ -18,6 +18,11 @@ const domEvents = () => {
           getOrders().then(showOrders);
         });
       }
+    }
+
+    if (e.target.id.includes('editOrder-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      getSingleOrder(firebaseKey).then((item) => createOrderForm(item));
     }
   });
 

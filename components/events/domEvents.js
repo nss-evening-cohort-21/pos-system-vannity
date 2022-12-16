@@ -7,7 +7,7 @@ const domEvents = () => {
     if (e.target.id.includes('home-create-order')) {
       createOrderForm();
     }
-    if (e.target.id.includes('edit-btn')) {
+    if (e.target.id.includes('editOrder-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       getSingleOrder(firebaseKey).then((item) => createOrderForm(item));
     }

@@ -1,6 +1,6 @@
 import createOrderForm from '../forms/createOrderForm';
 import { deleteOrder, getOrders } from '../../api/orderData';
-import { emptyOrders, viewOrders } from '../../pages/viewOrders';
+import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
 
 const domEvents = () => {
@@ -9,7 +9,7 @@ const domEvents = () => {
       createOrderForm();
     }
 
-    if (e.target.id.includes('delete-details')) {
+    if (e.target.id.includes('delete-btn')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const [, firebaseKey] = (e.target.id.split('--'));
@@ -24,7 +24,7 @@ const domEvents = () => {
   document.querySelector('#home-view-orders').addEventListener('click', () => {
     getOrders().then((menuNameArray) => {
       if (menuNameArray.length) {
-        viewOrders(menuNameArray);
+        showOrders(menuNameArray);
       } else {
         emptyOrders();
       }

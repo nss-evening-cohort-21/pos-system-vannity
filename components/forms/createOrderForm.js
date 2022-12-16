@@ -4,7 +4,7 @@ import selectOrderType from './selectOrderType';
 
 const createOrderForm = (obj = {}) => {
   clearDom();
-  const domString = `<form id="${obj.firebaseKey ? `edit-order--${obj.firebaseKey}` : 'create-order'}" class="mb-4">
+  const domString = `<form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'}" class="mb-4">
       <div class="form-group">
         <label for="image">Order Name</label>
         <input type="text" class="form-control" id="order_name" placeholder="Order Name" value="${obj.order_name || ''}" required>
@@ -19,7 +19,7 @@ const createOrderForm = (obj = {}) => {
       </div>
       <div class="form-group" id="select-ordertype">
       </div>
-      <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
+      <button type="submit" id="submitOrderBtn" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
   renderToDOM('#form-container', domString);

@@ -10,8 +10,8 @@ const createOrderForm = (obj = {}) => {
         <input type="text" class="form-control" id="order_name" placeholder="Order Name" value="${obj.order_name || ''}" required>
       </div>
       <div class="form-group">
-        <label for="image"></label>
-        <input type="number" class="form-control" id="phone_number" placeholder="###-###-####" value="${obj.phone_number || ''}"required>
+        <label for="phone"></label>
+        <input type="tel" class="form-control" id="phone_number" placeholder="###-###-####" value="${obj.phone_number || ''}"required>
       </div>
       <div class="form-group">
         <label for="title">Email</label>

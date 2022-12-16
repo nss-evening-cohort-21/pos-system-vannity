@@ -5,7 +5,7 @@ const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-order')) {
-      // console.warn('CLICKED SUBMIT BOOK', e.target.id);
+      // console.warn('CLICKED SUBMIT ORDER', e.target.id);
 
       const payload = {
         order_name: document.querySelector('#order_name').value,

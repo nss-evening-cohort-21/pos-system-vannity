@@ -1,5 +1,7 @@
 import { createOrder, getOrders, updateOrder } from '../../api/orderData';
 import showOrders from '../../pages/orders';
+import addItemForm from '../forms/addItemForm';
+import closeOrder from '../forms/closeOrderForm';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -23,7 +25,7 @@ const formEvents = () => {
         const patchPayLoad = { firebaseKey: name };
 
         updateOrder(patchPayLoad).then(() => {
-          getOrders().then(showOrders);
+          addItemForm().then(closeOrder);
         });
       });
     }

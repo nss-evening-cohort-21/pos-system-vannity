@@ -1,5 +1,7 @@
 import createOrderForm from '../forms/createOrderForm';
-import { deleteOrder, getOrders, getSingleOrder } from '../../api/orderData';
+import {
+  deleteOrder, getOrders, getSingleOrder,
+} from '../../api/orderData';
 import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
 import closeOrder from '../forms/closeOrderForm';
@@ -44,6 +46,12 @@ const domEvents = () => {
       closeOrder();
     }
   });
+
+  // document.querySelectorAll('#form-container').addEventListener('click', (e) => {
+  //   if (e.target.id.includes('submit-order')) {
+  //     updateOrder();
+  //   }
+  // });
 };
 
 export default domEvents;

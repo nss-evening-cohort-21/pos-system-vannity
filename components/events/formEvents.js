@@ -19,7 +19,7 @@ const formEvents = () => {
         // payment_type: '',
         // tip_amount: '',
         uid: '',
-        // isFulfilled: 'true',
+        // isFulfilled: document.querySelector('#isFulfilled')
       };
       createOrder(payload).then(({ name }) => {
         const patchPayLoad = { firebaseKey: name };
@@ -41,7 +41,7 @@ const formEvents = () => {
         // payment_type: '',
         // tip_amount: '',
         uid: '',
-        // isFulfilled: 'true',
+        // isFulfilled: document.querySelector('#isFulfilled'),
         firebaseKey,
       };
       updateOrder(payload).then(() => {

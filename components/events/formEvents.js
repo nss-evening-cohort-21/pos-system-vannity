@@ -46,6 +46,11 @@ const formEvents = () => {
         getOrders().then(showOrders);
       });
     }
+    document.querySelector('#form').addEventListener('click', () => {
+      if (e.target.id.includes('submitOrderBtn')) {
+        updateOrder();
+      }
+    });
   });
 };
 

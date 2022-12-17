@@ -19,7 +19,7 @@ const createOrderForm = (obj = {}) => {
       </div>
       <div class="form-group" id="select-ordertype">
       </div>
-      <button type="submit" id="submitOrderBtn" class="btn btn-primary mt-3">Create/Edit Order</button>
+      <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
   renderToDOM('#form-container', domString);

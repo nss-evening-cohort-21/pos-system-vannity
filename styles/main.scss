@@ -3,8 +3,8 @@
 
 
 body {
-  background-color: #ebebeb;
-  color: darkgray;
+  background-color: #CDDDDD;
+  background-image: url("https://cdn5.vectorstock.com/i/1000x1000/10/19/sketchy-beer-and-snacks-seamless-background-vector-5921019.jpg");
   text-align: center;
   margin-top: 100px;
 }
@@ -24,6 +24,26 @@ h5 {
   color: #414a4c;
 }
 
+#view-orders {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#create-order {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#search {
+  padding-left: 20px;
+}
+
 #home {
   width: 75px;
   padding-right: 8px;
@@ -39,7 +59,7 @@ h5 {
 #google-auth {
   margin-top: 10px;
   margin-bottom: auto;
-  background-color: #9C081D;
+  background-color: #77878B;
 }
 
 #main-container {
@@ -58,6 +78,8 @@ h5 {
     margin-top: 150px;
     margin-bottom: 20px;
     font-size: 100px;
+    color: #373E40;
+    background-color: rgba(192,192,192, 0.8);
   }
 
   #home-view-orders, #home-create-order, #home-view-revenue {
@@ -66,6 +88,18 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #home-view-orders {
+    background-color: #305252;
+  }
+  
+  #home-create-order {
+    background-color: #488286;
+  }
+  
+  #home-view-revenue {
+    background-color: #77878B;
   }
 
   p {

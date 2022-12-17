@@ -26,14 +26,16 @@ const domEvents = () => {
     }
   });
 
-  document.querySelector('#home-view-orders').addEventListener('click', () => {
-    getOrders().then((menuNameArray) => {
-      if (menuNameArray.length) {
-        showOrders(menuNameArray);
-      } else {
-        emptyOrders();
-      }
-    });
+  document.querySelector('#main-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('home-view-orders')) {
+      getOrders().then((menuNameArray) => {
+        if (menuNameArray.length) {
+          showOrders(menuNameArray);
+        } else {
+          emptyOrders();
+        }
+      });
+    }
   });
 };
 

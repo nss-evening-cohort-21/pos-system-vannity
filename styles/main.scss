@@ -3,8 +3,7 @@
 
 
 body {
-  background-color: #ebebeb;
-  color: darkgray;
+  background-color: #CDDDDD;
   text-align: center;
   margin-top: 100px;
 }
@@ -58,6 +57,11 @@ h5 {
     margin-top: 150px;
     margin-bottom: 20px;
     font-size: 100px;
+    color: #373E40;
+  }
+
+  #nav-bar-color {
+    background-color: #373E40;
   }
 
   #home-view-orders, #home-create-order, #home-view-revenue {
@@ -66,6 +70,18 @@ h5 {
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #home-view-orders {
+    background-color: #305252;
+  }
+  
+  #home-create-order {
+    background-color: #488286;
+  }
+  
+  #home-view-revenue {
+    background-color: #77878B;
   }
 
   p {

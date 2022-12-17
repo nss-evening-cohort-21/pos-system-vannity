@@ -17,7 +17,7 @@ const addItemForm = (obj = {}) => {
       <label for="price">Item Price</label>
       <textarea type="number" class="form-control" id="price">${obj.price || ''}</textarea>
     </div>
-    <button type="submit" class="btn btn-primary"> Create/Edit Item
+    <button type="submit" class="btn btn-primary" id="add-edit-item"> Create/Edit Item
     </button>
     </form>
     `;

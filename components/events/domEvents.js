@@ -2,6 +2,7 @@ import createOrderForm from '../forms/createOrderForm';
 import { deleteOrder, getOrders, getSingleOrder } from '../../api/orderData';
 import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
+import closeOrder from '../forms/closeOrderForm';
 
 const domEvents = () => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -35,6 +36,12 @@ const domEvents = () => {
           emptyOrders();
         }
       });
+    }
+  });
+
+  document.querySelector('#form-container').addEventListener('click', (e) => {
+    if (e.target.id.includes('add-edit-item')) {
+      closeOrder();
     }
   });
 };

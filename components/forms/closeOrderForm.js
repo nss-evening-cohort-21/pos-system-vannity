@@ -1,5 +1,6 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
+import selectPaymentType from './selectPaymentType';
 
 const closeOrder = (obj = {}) => {
   clearDom();
@@ -13,6 +14,7 @@ const closeOrder = (obj = {}) => {
   </form>`;
 
   renderToDOM('#form-container', domString);
+  selectPaymentType(`${obj.selectPaymentType || ''}`);
 };
 
 export default closeOrder;

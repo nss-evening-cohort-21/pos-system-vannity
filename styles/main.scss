@@ -9,15 +9,24 @@ body {
   margin-top: 100px;
 }
 
-.icon {
-  width: 50px;
-  padding-right: 8px;
+#logo {
+  display: block;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 h5 {
   font-size: large;
   font-weight: bold;
   color: #414a4c;
+}
+
+#home {
+  width: 75px;
+  padding-right: 8px;
 }
 
 #welcome {
@@ -30,7 +39,7 @@ h5 {
 #google-auth {
   margin-top: 10px;
   margin-bottom: auto;
-  background-color: #ebb4ff;
+  background-color: #9C081D;
 }
 
 #main-container {

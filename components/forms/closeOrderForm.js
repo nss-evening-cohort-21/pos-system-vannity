@@ -1,20 +1,21 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
-import selectPaymentType from './selectPaymentType';
 
 const closeOrder = (obj = {}) => {
   clearDom();
-  const domString = `<form id="${obj.firebaseKey ? `close-order--${obj.firebaseKey}` : 'create-order'}" class="mb-4">
-      <div class="form-group" id="paymentType"></div>
-      <div class="form-group">
-        <label for="tip amount">Tip Amount</label>
-        <input type="number" class="form-control" id="tipAmount" aria-describedby="Tip Amount" placeholder="Enter Tip Amount" value="${obj.tip_amount || ''}"required>
-      </div>
-      <button type="submit" class="btn btn-primary mt-3" id="close-order">Close Order</button>
-    </form>`;
+  const domString = `<form id="create-order--${obj.firebaseKey}" class="mb-4">
+    <div class="form-group">
+      <label for="payment">Payment Type</label>
+      <input type="text" class="form-control" id="select-payment" placeholder="Select a Payment Type" value="${obj.payment_type || ''}" required>
+    </div>
+    <div class="form-group">
+    <label for="tip">Tip Amount</label>
+    <textarea type="number" class="form-control" id="tip">${obj.tip || ''}</textarea>
+  </div>
+    <button type="submit" class="btn btn-success mt-3">Close Order</button>
+  </form>`;
 
   renderToDOM('#form-container', domString);
-  selectPaymentType(`${obj.order_type || ''}`);
 };
 
 export default closeOrder;

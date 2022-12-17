@@ -23,6 +23,26 @@ h5 {
   color: #414a4c;
 }
 
+#view-orders {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#create-order {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#search {
+  padding-left: 20px;
+}
+
 #home {
   width: 75px;
   padding-right: 8px;
@@ -58,10 +78,6 @@ h5 {
     margin-bottom: 20px;
     font-size: 100px;
     color: #373E40;
-  }
-
-  #nav-bar-color {
-    background-color: #373E40;
   }
 
   #home-view-orders, #home-create-order, #home-view-revenue {

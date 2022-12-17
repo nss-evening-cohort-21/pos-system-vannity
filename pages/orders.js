@@ -12,7 +12,7 @@ const showOrders = (array) => {
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${item.order_name}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">${item.isFulfilled}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Order Fulfilled: ${item.isFulfilled}</h6>
     <p class="card-text">${item.phone_number}</p>
     <p class="card-text">${item.email}</p>
     <p class="card-text">${item.order_type}</p>

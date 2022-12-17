@@ -1,11 +1,9 @@
 import { getOrders } from '../../api/orderData';
+import homePage from '../../pages/homePage';
 import showOrders from '../../pages/orders';
 import { emptyOrders } from '../../pages/viewOrders';
 import { signOut } from '../../utils/auth';
-import clearDom from '../../utils/clearDom';
 import createOrderForm from '../forms/createOrderForm';
-import domBuilder from '../shared/domBuilder';
-import navBar from '../shared/navBar';
 
 // navigation events
 const navigationEvents = () => {
@@ -17,7 +15,10 @@ const navigationEvents = () => {
     if (e.target.id.includes('create-order')) {
       createOrderForm();
     }
-    if (e.target.id.includes('view-order')) {
+  });
+
+  document.querySelector('#navigation').addEventListener('click', (e) => {
+    if (e.target.id.includes('view-orders')) {
       getOrders().then((menuNameArray) => {
         if (menuNameArray.length) {
           showOrders(menuNameArray);
@@ -26,10 +27,11 @@ const navigationEvents = () => {
         }
       });
     }
+  });
+
+  document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('home')) {
-      clearDom();
-      domBuilder();
-      navBar();
+      homePage();
     }
   });
 };

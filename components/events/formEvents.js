@@ -13,7 +13,7 @@ const formEvents = (user) => {
         order_name: document.querySelector('#order_name').value,
         phone_number: document.querySelector('#phone_number').value,
         email: document.querySelector('#email').value,
-        order_type: document.querySelector('#select-ordertype').value,
+        order_type: document.querySelector('#orderType').value,
         // item_name: 'Maurice',
         // order_total: '',
         // payment_type: '',
@@ -35,17 +35,17 @@ const formEvents = (user) => {
         order_name: document.querySelector('#order_name').value,
         phone_number: document.querySelector('#phone_number').value,
         email: document.querySelector('#email').value,
-        order_type: document.querySelector('#select-ordertype').value,
+        order_type: document.querySelector('#orderType').value,
         // item_name: 'Maurice',
         // order_total: '',
         // payment_type: '',
         // tip_amount: '',
         uid: user.uid,
-        // isFulfilled: 'true',
+        // isFulfilled: document.querySelector('#isFulfilled'),
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        getOrders(user.uid).then(showOrders);
+        getOrders().then(showOrders);
       });
     }
   });

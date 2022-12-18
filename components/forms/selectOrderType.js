@@ -1,12 +1,12 @@
 import { getOrders } from '../../api/orderData';
 import renderToDOM from '../../utils/renderToDom';
 
-const selectOrderType = (orderId) => {
+const selectOrderType = (orderId, user) => {
   let domString = `<label for="ordertype">Select Order Type</label>
     <select class="form-control" id="orderType" required>
     <option value="">Select Order Type</option>`;
 
-  getOrders().then((orderArray) => {
+  getOrders(user).then((orderArray) => {
     orderArray.forEach((orders) => {
       domString += `
     <option

@@ -3,7 +3,7 @@ import showOrders from '../../pages/orders';
 import addItemForm from '../forms/addItemForm';
 import closeOrder from '../forms/closeOrderForm';
 
-const formEvents = () => {
+const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
     e.preventDefault();
     if (e.target.id.includes('submit-order')) {
@@ -18,14 +18,14 @@ const formEvents = () => {
         // order_total: '',
         // payment_type: '',
         // tip_amount: '',
-        uid: '',
+        uid: user.uid,
         // isFulfilled: 'true',
       };
       createOrder(payload).then(({ name }) => {
         const patchPayLoad = { firebaseKey: name };
 
         updateOrder(patchPayLoad).then(() => {
-          addItemForm().then(closeOrder);
+          addItemForm(user.uid).then(closeOrder);
         });
       });
     }
@@ -40,12 +40,12 @@ const formEvents = () => {
         // order_total: '',
         // payment_type: '',
         // tip_amount: '',
-        uid: '',
+        uid: user.uid,
         // isFulfilled: 'true',
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        getOrders().then(showOrders);
+        getOrders(user.uid).then(showOrders);
       });
     }
   });

@@ -44,8 +44,8 @@ const deleteMenuName = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const createMenuName = () => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/menu.json`, {
+const createMenuName = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/menu.json?orderBy="language_id"&equalTo="${firebaseKey}"`, {
     method: 'POST',
 
     headers: {

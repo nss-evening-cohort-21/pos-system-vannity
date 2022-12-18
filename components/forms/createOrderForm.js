@@ -2,7 +2,7 @@ import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 import selectOrderType from './selectOrderType';
 
-const createOrderForm = (obj = {}) => {
+const createOrderForm = (obj = {}, user) => {
   clearDom();
   const domString = `<form id="${obj.firebaseKey ? `update-order--${obj.firebaseKey}` : 'submit-order'}" class="mb-4">
       <div class="form-group">
@@ -23,7 +23,7 @@ const createOrderForm = (obj = {}) => {
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectOrderType(`${obj.order_type || ''}`);
+  selectOrderType(`${obj.order_type || ''}`, user);
 };
 
 export default createOrderForm;

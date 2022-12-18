@@ -2,7 +2,7 @@ import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 import selectPaymentType from './selectPaymentType';
 
-const closeOrder = (obj = {}) => {
+const closeOrder = (obj = {}, user) => {
   clearDom();
   const domString = `<form id="create-order--${obj.firebaseKey}" class="mb-4">
     <div class="form-group" id="select-payment"></div>
@@ -14,7 +14,7 @@ const closeOrder = (obj = {}) => {
   </form>`;
 
   renderToDOM('#form-container', domString);
-  selectPaymentType(`${obj.selectPaymentType || ''}`);
+  selectPaymentType(`${obj.selectPaymentType || ''}`, user);
 };
 
 export default closeOrder;

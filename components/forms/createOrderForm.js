@@ -1,6 +1,5 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
-import selectOrderType from './selectOrderType';
 
 const createOrderForm = (obj = {}) => {
   clearDom();
@@ -17,13 +16,18 @@ const createOrderForm = (obj = {}) => {
         <label for="title">Email</label>
         <input type="email" class="form-control" id="email" aria-describedby="Email" placeholder="Enter Email" value="${obj.email || ''}"required>
       </div>
-      <div class="form-group" id="select-ordertype">
+      <div class="form-group" id="select-ordertype"><label for="ordertype">Select Order Type</label>
+    <select class="form-control" id="orderType" required>
+    <option value="">Select Order Type</option>
+     <option value="In-Person"${obj.order_type === 'In-Person' ? 'selected' : ''}>In-Person</option>
+      <option value="Online"${obj.order_type === 'Online' ? 'selected' : ''}>Online</option>
+       <option value="Mobile"${obj.order_type === 'Mobile' ? 'selected' : ''}>Mobile</option>
+       </select>
       </div>
       <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
     </form>`;
 
   renderToDOM('#form-container', domString);
-  selectOrderType(`${obj.order_type || ''}`);
 };
 
 export default createOrderForm;

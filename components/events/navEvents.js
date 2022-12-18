@@ -6,20 +6,20 @@ import { signOut } from '../../utils/auth';
 import createOrderForm from '../forms/createOrderForm';
 
 // navigation events
-const navigationEvents = () => {
+const navigationEvents = (user) => {
   // LOGOUT BUTTON
   document.querySelector('#logout-button')
     .addEventListener('click', signOut);
 
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('create-order')) {
-      createOrderForm();
+      createOrderForm(user.uid);
     }
   });
 
   document.querySelector('#navigation').addEventListener('click', (e) => {
     if (e.target.id.includes('view-orders')) {
-      getOrders().then((menuNameArray) => {
+      getOrders(user.uid).then((menuNameArray) => {
         if (menuNameArray.length) {
           showOrders(menuNameArray);
         } else {

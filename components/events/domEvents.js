@@ -5,11 +5,12 @@ import {
 import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
 import closeOrder from '../forms/closeOrderForm';
+import viewOrderDetails from '../../pages/orderDetails';
 
-const domEvents = () => {
+const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('home-create-order')) {
-      createOrderForm();
+      createOrderForm(user.uid);
     }
 
     if (e.target.id.includes('delete-btn')) {
@@ -18,7 +19,7 @@ const domEvents = () => {
         const [, firebaseKey] = (e.target.id.split('--'));
 
         deleteOrder(firebaseKey).then(() => {
-          getOrders().then(showOrders);
+          getOrders(user.uid).then(showOrders);
         });
       }
     }
@@ -31,7 +32,7 @@ const domEvents = () => {
 
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('home-view-orders')) {
-      getOrders().then((menuNameArray) => {
+      getOrders(user.uid).then((menuNameArray) => {
         if (menuNameArray.length) {
           showOrders(menuNameArray);
         } else {
@@ -43,7 +44,13 @@ const domEvents = () => {
 
   document.querySelector('#form-container').addEventListener('click', (e) => {
     if (e.target.id.includes('add-edit-item')) {
-      closeOrder();
+      closeOrder(user.uid);
+    }
+  });
+
+  document.querySelector('#store').addEventListener('click', (e) => {
+    if (e.target.id.includes('viewOrder-btn')) {
+      viewOrderDetails(user.uid);
     }
   });
 

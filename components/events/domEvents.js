@@ -31,7 +31,7 @@ const domEvents = (user) => {
 
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('home-view-orders')) {
-      getOrders().then((menuNameArray) => {
+      getOrders(user.uid).then((menuNameArray) => {
         if (menuNameArray.length) {
           showOrders(menuNameArray);
         } else {

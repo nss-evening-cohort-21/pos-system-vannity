@@ -2,7 +2,7 @@ import clearDom from '../utils/clearDom';
 import renderToDOM from '../utils/renderToDom';
 
 const emptyOrders = () => {
-  const domString = '<h1>No Vocab</h1>';
+  const domString = '<h3>No Orders</h3>';
   renderToDOM('#store', domString);
 };
 
@@ -25,7 +25,7 @@ const viewOrders = (obj) => {
   </div>
 </div>`;
 
-  renderToDOM('#view', domString);
+  renderToDOM('#store', domString);
 };
 
 export { emptyOrders, viewOrders };

@@ -81,6 +81,17 @@ const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
     .then((data) => resolve(Object.values(data)))
     .catch(reject);
 });
+const getAllTips = () => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/orders.json?orderBy="isFulfilled"&equalTo="true"&sortBy="tip_amount"`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
 
 export {
   getOrders,
@@ -88,5 +99,6 @@ export {
   createOrder,
   deleteOrder,
   updateOrder,
-  getOrderItems
+  getOrderItems,
+  getAllTips
 };

@@ -3,63 +3,97 @@
 
 
 body {
-  background-color: #ebebeb;
-  color: darkgray;
+  background-color: #CDDDDD;
+  background-image: url("https://cdn5.vectorstock.com/i/1000x1000/10/19/sketchy-beer-and-snacks-seamless-background-vector-5921019.jpg");
   text-align: center;
   margin-top: 100px;
-}
-
-#logo {
+ }
+  
+ #logo {
   display: block;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 150px;
   margin-bottom: 50px;
-}
-
-h5 {
+ }
+  
+ h5 {
   font-size: large;
   font-weight: bold;
   color: #414a4c;
-}
-
-#home {
+ }
+  
+ #view-orders {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+ }
+  
+ #create-order {
+  color: #CDDDDD;
+  padding-left: 20px;
+  padding-right: 40px;
+  margin-top: auto;
+  margin-bottom: auto;
+ }
+  
+ #search {
+  padding-left: 20px;
+ }
+  
+ #home {
   width: 75px;
   padding-right: 8px;
-}
-
-#welcome {
+ }
+  
+ #welcome {
   align-content: center;
   color: #699b72;
   font-size: 60px;
   margin-top: 300px;
-}
-
-#google-auth {
+ }
+  
+ label {
+  color: #414a4c;
+  background-color: rgba(192,192,192, 0.8);
+  margin: 10px;
+ }
+  
+ #google-auth {
   margin-top: 10px;
   margin-bottom: auto;
-  background-color: #9C081D;
-}
-
-#main-container {
+  background-color: #77878B;
+ }
+  
+ #main-container {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   margin-top: 100px;
   align-content: center;
-
+  
   #add-button {
     margin: 0 auto;
     text-align: center;
   }
-
+  
   h1 {
-    margin-top: 150px;
     margin-bottom: 20px;
-    font-size: 100px;
+    font-size: 75px;
+    color: #373E40;
+    background-color: rgba(192,192,192, 0.8);
   }
-
+  
+  h3 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: #373E40;
+    background-color: rgba(192,192,192, 0.8);
+  }
+  
   #home-view-orders, #home-create-order, #home-view-revenue {
     width: 400px;
     margin: 30px;
@@ -67,30 +101,41 @@ h5 {
     margin-left: auto;
     margin-right: auto;
   }
-
+  
+  #home-view-orders {
+    background-color: #305252;
+  }
+   #home-create-order {
+    background-color: #488286;
+  }
+   #home-view-revenue {
+    background-color: #77878B;
+  }
+  
   p {
     color: darkgray;
   }
-
+  
   .btn-success, .btn-primary {
     background-color: #699b72;
   }
-
+  
   .btn-danger {
     background-color: darkgrey;
   }
-
+  
   #form-container {
     width: 60%;
     margin: auto;
     justify-content: center;
     color: darkgray;
-
+    padding-top: 100px;
+  
     #formModal {
       color: #ebb4ff;
     }
   }
-
+  
   #store {
     width: 90%;
     display: flex;
@@ -98,35 +143,31 @@ h5 {
     text-align: center;
     margin: auto;
     justify-content: center;
-
+  
     .card {
       width: 300px;
       margin: 5px;
-
+  
       .sale-badge {
         font-size: 1em;
         background-color: #ebb4ff;
       }
     }
-
-    .table {
-      margin: 10px;
-      width: 60%;
-      margin: 0 auto;
-    }
   }
-}
-
-#view {
+ }
+  
+ #view {
   width: 60%;
   margin: auto;
-
+  
   .details {
     min-width: 50%;
     max-width: 60%;
   }
-
+  
   .description {
     white-space: pre-wrap;
   }
-}
+ }
+  
+ 

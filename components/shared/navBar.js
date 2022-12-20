@@ -2,7 +2,7 @@ import renderToDOM from '../../utils/renderToDom';
 
 const navBar = () => {
   const domString = `
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-secondary mb-5" id="navbar-color">
+    <nav class="navbar fixed-top navbar-expand-lg" style="background-color: #305252;" "mb-5" id="navbar-color">
     <div class="container-fluid">
       <img src="https://user-images.githubusercontent.com/29741570/205346767-a182560c-64a6-4cfa-80b3-0d64cf998242.png" class="logo" id="home">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

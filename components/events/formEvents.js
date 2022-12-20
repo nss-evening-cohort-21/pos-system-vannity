@@ -1,5 +1,7 @@
 import { createOrder, getOrders, updateOrder } from '../../api/orderData';
+import { createRevenue, getRevenue } from '../../api/revenueData';
 import showOrders from '../../pages/orders';
+import viewRevenue from '../../pages/viewRevenue';
 
 const formEvents = () => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -44,6 +46,17 @@ const formEvents = () => {
       };
       updateOrder(payload).then(() => {
         getOrders().then(showOrders);
+      });
+    }
+    if (e.target.id.includes('close-order')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        order_total: document.querySelector('#order_total').value,
+        tip_amount: document.querySelector('#phone_number').value,
+        firebaseKey,
+      };
+      createRevenue(payload).then(() => {
+        getRevenue(firebaseKey).then(viewRevenue);
       });
     }
   });

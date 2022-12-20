@@ -7,6 +7,7 @@ const viewRevenue = () => {
   <div class= "card rev-card">
    <div class= "card-body">
    <h1 class="card-title">Revenue</h1>
+
    </div>
   </div>`;
 

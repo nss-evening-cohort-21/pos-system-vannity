@@ -8,7 +8,7 @@
   "item_name": "Maurice",
   "order_total": "",
   "payment_type": "",
-  "tip_amount": "$14.08",
+  "tip_amount": "14.08",
   "uid":"",
   "isFulfilled": "true"
 },
@@ -21,7 +21,7 @@
   "item_name": "Bernice",
   "order_total": "",
   "payment_type": "",
-  "tip_amount": "$13.88",
+  "tip_amount": "13.88",
   "uid":"",
   "isFulfilled": "false"
 },
@@ -34,7 +34,7 @@
   "item_name": "Jacquette",
   "order_total": "",
   "payment_type": "",
-  "tip_amount": "$8.85",
+  "tip_amount": "8.85",
   "uid":"",
   "isFulfilled": "true"
 },
@@ -47,7 +47,7 @@
   "item_name": "Rowe",
   "order_total": "",
   "payment_type": "",
-  "tip_amount": "$8.05",
+  "tip_amount": "8.05",
   "uid":"",
   "isFulfilled": "false"
 },
@@ -60,7 +60,7 @@
   "item_name": "Coreen",
   "order_total": "",
   "payment_type": "",
-  "tip_amount": "$18.57",
+  "tip_amount": "18.57",
   "uid":"",
   "isFulfilled": "false"
 }

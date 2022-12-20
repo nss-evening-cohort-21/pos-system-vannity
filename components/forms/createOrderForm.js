@@ -24,7 +24,7 @@ const createOrderForm = (obj = {}) => {
        <option value="Mobile"${obj.order_type === 'Mobile' ? 'selected' : ''}>Mobile</option>
        </select>
       </div>
-      <button type="submit" class="btn btn-primary mt-3">Create/Edit Order</button>
+      <button type="submit" class="btn btn-primary mt-3" id="create-edit">Create/Edit Order</button>
     </form>`;
 
   renderToDOM('#form-container', domString);

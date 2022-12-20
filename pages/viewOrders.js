@@ -11,7 +11,7 @@ const viewOrders = (obj) => {
 
   const domString = `
   <div class="mt-5 d-flex flex-wrap">
-  <div class="d-flex flex-column">
+  <div class="d-flex flex-column" id="view-card">
   <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">${obj.order_name}</h5>

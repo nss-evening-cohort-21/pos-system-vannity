@@ -1,4 +1,5 @@
 import { createOrder, getOrders, updateOrder } from '../../api/orderData';
+import viewOrderDetails from '../../pages/orderDetails';
 import showOrders from '../../pages/orders';
 import addItemForm from '../forms/addItemForm';
 import closeOrder from '../forms/closeOrderForm';
@@ -45,7 +46,22 @@ const formEvents = (user) => {
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        getOrders().then(showOrders);
+        getOrders(user.uid).then(showOrders);
+      });
+    }
+
+    if (e.target.id.includes('add-edit-item')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        name: document.querySelector('#name').value,
+        price: document.querySelector('#price').value,
+        description: document.querySelector('#description').value,
+        uid: user.uid,
+        // isFulfilled: document.querySelector('#isFulfilled'),
+        firebaseKey,
+      };
+      updateOrder(payload).then(() => {
+        viewOrderDetails(user.uid);
       });
     }
   });

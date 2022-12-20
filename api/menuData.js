@@ -44,13 +44,14 @@ const deleteMenuName = (firebaseKey) => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
-const createMenuName = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/menu.json?orderBy="language_id"&equalTo="${firebaseKey}"`, {
+const createMenuName = (payload) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/menu.json`, {
     method: 'POST',
 
     headers: {
       'Content-Type': 'application/json',
     },
+    body: JSON.stringify(payload),
   })
     .then((response) => response.json())
     .then((data) => resolve(data))

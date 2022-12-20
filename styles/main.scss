@@ -3,7 +3,7 @@
 
 
 body {
-  background-color: #CDDDDD;
+  // background-color: #CDDDDD;
   background-image: url("https://cdn5.vectorstock.com/i/1000x1000/10/19/sketchy-beer-and-snacks-seamless-background-vector-5921019.jpg");
   text-align: center;
   margin-top: 100px;
@@ -49,16 +49,17 @@ body {
   padding-right: 8px;
  }
   
- #welcome {
-  align-content: center;
-  color: #699b72;
-  font-size: 60px;
-  margin-top: 300px;
- }
+//  #welcome {
+//   align-content: center;
+//   color: #699b72;
+//   font-size: 60px;
+//   margin-top: 300px;
+//  }
   
  label {
   color: #414a4c;
   background-color: rgba(192,192,192, 0.8);
+  padding: 8px;
   margin: 10px;
  }
   
@@ -69,14 +70,14 @@ body {
  }
   
  #main-container {
-  display: flex;
-  flex-direction: column;
+  // display: flex;
+  // flex-direction: wrap;
   margin: 0 auto;
   margin-top: 100px;
   align-content: center;
   
   h1 {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 100px;
     color: #373E40;
     background-color: rgba(192,192,192, 0.8);
@@ -99,6 +100,7 @@ body {
   
   #home-view-orders {
     background-color: #305252;
+    margin-top: 40px;
   }
    #home-create-order {
     background-color: #488286;
@@ -127,9 +129,6 @@ body {
     color: darkgray;
     padding-top: 100px;
   
-    // #formModal {
-    //   color: #ebb4ff;
-    // }
   }
   
   #store {
@@ -155,7 +154,12 @@ body {
  #view {
   width: 60%;
   margin: auto;
-  
+
+  #view-card {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   .details {
     min-width: 50%;
     max-width: 60%;

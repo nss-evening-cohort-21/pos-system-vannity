@@ -8,7 +8,7 @@ const closeOrder = (obj = {}, user) => {
     <div class="form-group" id="select-paymenttype">
     <label for="paymenttype">Select Payment Type</label>
     <select class="form-control" id="orderType" required>
-    <option value="">Select Order Type</option>
+    <option value="">Select Payment Type</option>
      <option value="Cash"${obj.payment_type === 'Cash' ? 'selected' : ''}>Cash</option>
       <option value="Check"${obj.payment_type === 'Check' ? 'selected' : ''}>Check</option>
        <option value="Debit"${obj.payment_type === 'Debit' ? 'selected' : ''}>Debit</option>

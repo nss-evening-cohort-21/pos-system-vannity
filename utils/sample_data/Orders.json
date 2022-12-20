@@ -15,7 +15,7 @@
   "email": "bcossentine1@businesswire.com",
   "order_type": "Online",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 },
 "-NIeAhPHmWseKoH-tXhY": {
   "firebaseKey": "-NIeAhPHmWseKoH-tXhY",
@@ -24,7 +24,7 @@
   "email": "jpostill2@cdc.gov",
   "order_type": "Online",
   "uid":"",
-  "isFulfilled": "true"
+  "isFulfilled": true
 },
 "-NIeAhPK2yJcKWWJvj2s": {
   "firebaseKey": "-NIeAhPK2yJcKWWJvj2s",
@@ -33,7 +33,7 @@
   "email": "rrontree3@meetup.com",
   "order_type": "In-Person",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 },
 "-NIeAhPPpi_0AtyuoCFR": {
   "firebaseKey": "-NIeAhPPpi_0AtyuoCFR",
@@ -42,6 +42,6 @@
   "email": "clewcock4@blinklist.com",
   "order_type": "Mobile",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 }
 }

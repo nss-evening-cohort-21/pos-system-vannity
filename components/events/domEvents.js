@@ -47,6 +47,11 @@ const domEvents = (user) => {
     }
   });
 
+  // document.querySelector('#form-container').addEventListener('click', (e) => {
+  //   if (e.target.id.includes('close-order')) {
+  //     viewRevenue(user.uid);
+  //   }
+  // });
   // document.querySelectorAll('#form-container').addEventListener('click', (e) => {
   //   if (e.target.id.includes('submit-order')) {
   //     updateOrder();

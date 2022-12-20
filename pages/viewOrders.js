@@ -25,7 +25,7 @@ const viewOrders = (obj) => {
   </div>
 </div>`;
 
-  renderToDOM('#view', domString);
+  renderToDOM('#store', domString);
 };
 
 export { emptyOrders, viewOrders };

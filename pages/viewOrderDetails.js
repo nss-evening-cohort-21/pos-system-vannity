@@ -10,7 +10,7 @@ const viewOrderDetails = (order) => {
 
   domString += `
       <h1>Order Name: ${order.order_name}</h1>
-    <h1>Order Total: </h1>
+    <h1 id="orderTotal">Order Total: </h1>
     <h2 class="dollarSign">$</h2>
     <div class="card">
     <div class="card-body">

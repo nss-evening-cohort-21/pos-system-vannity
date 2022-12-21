@@ -2,7 +2,7 @@ import { createOrder, getOrders, updateOrder } from '../../api/orderData';
 import viewOrderDetails from '../../pages/orderDetails';
 import showOrders from '../../pages/orders';
 import addItemForm from '../forms/addItemForm';
-import closeOrder from '../forms/closeOrderForm';
+import { viewOrders } from '../../pages/viewOrders';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -20,13 +20,13 @@ const formEvents = (user) => {
         // payment_type: '',
         // tip_amount: '',
         uid: user.uid,
-        // isFulfilled: 'true',
+        isFulfilled: document.querySelector('#isFulfilled'),
       };
       createOrder(payload).then(({ name }) => {
         const patchPayLoad = { firebaseKey: name };
 
         updateOrder(patchPayLoad).then(() => {
-          addItemForm(user.uid).then(closeOrder);
+          addItemForm(user.uid).then(viewOrders);
         });
       });
     }
@@ -42,7 +42,7 @@ const formEvents = (user) => {
         // payment_type: '',
         // tip_amount: '',
         uid: user.uid,
-        // isFulfilled: document.querySelector('#isFulfilled'),
+        isFulfilled: document.querySelector('#isFulfilled'),
         firebaseKey,
       };
       updateOrder(payload).then(() => {
@@ -57,7 +57,7 @@ const formEvents = (user) => {
         price: document.querySelector('#price').value,
         description: document.querySelector('#description').value,
         uid: user.uid,
-        // isFulfilled: document.querySelector('#isFulfilled'),
+        isFulfilled: 'true',
         firebaseKey,
       };
       updateOrder(payload).then(() => {

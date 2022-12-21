@@ -70,6 +70,25 @@ const updateMenuName = (payload) => new Promise((resolve, reject) => {
     .then((data) => resolve(data))
     .catch(reject);
 });
+const getMenuByOrderId = (firebaseKey) => new Promise((resolve, reject) => {
+  fetch(`${endpoint}/menu.json`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data) {
+        const items = Object.values(data);
+        const filteredItems = items.filter((item) => item.orderId === firebaseKey);
+        resolve(filteredItems);
+      } else {
+        resolve([]);
+      }
+    })
+    .catch(reject);
+});
 
 export {
   getMenuNames,
@@ -77,4 +96,5 @@ export {
   deleteMenuName,
   createMenuName,
   updateMenuName,
+  getMenuByOrderId
 };

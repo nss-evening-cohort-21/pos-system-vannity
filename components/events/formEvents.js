@@ -1,8 +1,10 @@
 import { createOrder, getOrders, updateOrder } from '../../api/orderData';
-import viewOrderDetails from '../../pages/orderDetails';
+import viewOrderDetails from '../../pages/viewOrderDetails';
 import showOrders from '../../pages/orders';
 import addItemForm from '../forms/addItemForm';
-import closeOrder from '../forms/closeOrderForm';
+// import closeOrder from '../forms/closeOrderForm';
+import { viewOrders } from '../../pages/viewOrders';
+import { getMenuNames } from '../../api/menuData';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -15,18 +17,14 @@ const formEvents = (user) => {
         phone_number: document.querySelector('#phone_number').value,
         email: document.querySelector('#email').value,
         order_type: document.querySelector('#orderType').value,
-        // item_name: 'Maurice',
-        // order_total: '',
-        // payment_type: '',
-        // tip_amount: '',
         uid: user.uid,
-        // isFulfilled: 'true',
+        isFulfilled: true,
       };
       createOrder(payload).then(({ name }) => {
         const patchPayLoad = { firebaseKey: name };
 
         updateOrder(patchPayLoad).then(() => {
-          addItemForm(user.uid).then(closeOrder);
+          addItemForm(user.uid).then(viewOrders);
         });
       });
     }
@@ -37,12 +35,8 @@ const formEvents = (user) => {
         phone_number: document.querySelector('#phone_number').value,
         email: document.querySelector('#email').value,
         order_type: document.querySelector('#orderType').value,
-        // item_name: 'Maurice',
-        // order_total: '',
-        // payment_type: '',
-        // tip_amount: '',
         uid: user.uid,
-        // isFulfilled: document.querySelector('#isFulfilled'),
+        isFulfilled: true,
         firebaseKey,
       };
       updateOrder(payload).then(() => {
@@ -50,18 +44,30 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('add-edit-item')) {
+    if (e.target.id.includes('add-item-btn')) {
       const [, firebaseKey] = e.target.id.split('--');
       const payload = {
         name: document.querySelector('#name').value,
         price: document.querySelector('#price').value,
         description: document.querySelector('#description').value,
         uid: user.uid,
-        // isFulfilled: document.querySelector('#isFulfilled'),
         firebaseKey,
       };
       updateOrder(payload).then(() => {
-        viewOrderDetails(user.uid);
+        getMenuNames(user.uid).then(viewOrderDetails);
+      });
+    }
+    if (e.target.id.includes('edit-item-btn')) {
+      const [, firebaseKey] = e.target.id.split('--');
+      const payload = {
+        name: document.querySelector('#name').value,
+        price: document.querySelector('#price').value,
+        description: document.querySelector('#description').value,
+        uid: user.uid,
+        firebaseKey,
+      };
+      updateOrder(payload).then(() => {
+        getMenuNames(user.uid).then(viewOrderDetails);
       });
     }
   });

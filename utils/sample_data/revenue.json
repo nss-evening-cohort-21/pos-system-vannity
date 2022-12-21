@@ -12,32 +12,31 @@
     "orderId":"",
     "order_total":64.8,
     "payment_type":"",
-    "tip_amount":53,
-    "dateClosed":
-    "1/18/2022"
+    "tip_amount": 11.00,
+    "dateClosed": "1/18/2022"
 },
     "-NJhT6PtLlOTZ0pUhxzZ": {
     "firebaseKey": "-NJhT6PtLlOTZ0pUhxzZ",
     "orderId":"",
     "order_total":77.8,
     "payment_type":"",
-    "tip_amount":97,
-    "dateClosed":"6/11/2022"
+    "tip_amount": 9.00,
+    "dateClosed": "6/11/2022"
 },
     "-NJhT6PwfHHkDEG4eHM6": {
         "firebaseKey": "-NJhT6PwfHHkDEG4eHM6",
         "orderId": "",
-        "order_total":33.7,
+        "order_total": 33.7,
         "payment_type": "",
-        "tip_amount":55,
-        "dateClosed":"9/17/2022"
+        "tip_amount": 10,
+        "dateClosed": "9/17/2022"
 },
     "-NJhT6PyPoyMziAY3WcZ": {
         "firebaseKey": "-NJhT6PyPoyMziAY3WcZ",
         "orderId": "",
         "order_total":82.6,
         "payment_type": "",
-        "tip_amount":82,
+        "tip_amount": 10,
         "dateClosed":"8/22/2022" 
 },
     "-NJhT6Q0_5Pt85oT5Uyk": {
@@ -45,7 +44,7 @@
         "orderId": "",
         "order_total":95.0,
         "payment_type": "",
-        "tip_amount":68,
+        "tip_amount": 5.00,
         "dateClosed":"12/11/2022"
 },
     "-NJhT6Q2O0oeaiaBHZfr": {
@@ -53,7 +52,7 @@
         "orderId": "",
         "order_total":92.4,
         "payment_type": "",
-        "tip_amount":80,
+        "tip_amount": 8.00,
         "dateClosed":"6/7/2022"
 }
 }

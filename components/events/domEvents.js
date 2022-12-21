@@ -6,6 +6,7 @@ import { emptyOrders } from '../../pages/viewOrders';
 import showOrders from '../../pages/orders';
 import closeOrder from '../forms/closeOrderForm';
 import viewRevenue from '../../pages/viewRevenue';
+import { getAllRevenue } from '../../api/revenueData';
 
 const domEvents = (user) => {
   document.querySelector('#main-container').addEventListener('click', (e) => {
@@ -49,7 +50,7 @@ const domEvents = (user) => {
   });
   document.querySelector('#main-container').addEventListener('click', (e) => {
     if (e.target.id.includes('home-view-revenue')) {
-      viewRevenue();
+      getAllRevenue().then(viewRevenue);
     }
   });
   // document.querySelectorAll('#form-container').addEventListener('click', (e) => {

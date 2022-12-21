@@ -5,10 +5,6 @@
   "phone_number": "(244) 4655246",
   "email": "mcarlo0@nature.com",
   "order_type": "In-Person",
-  "item_name": "Maurice",
-  "order_total": "",
-  "payment_type": "",
-  "tip_amount": "14.08",
   "uid":"",
   "isFulfilled": "true"
 },
@@ -18,12 +14,8 @@
   "phone_number": "(462) 4060752",
   "email": "bcossentine1@businesswire.com",
   "order_type": "Online",
-  "item_name": "Bernice",
-  "order_total": "",
-  "payment_type": "",
-  "tip_amount": "13.88",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 },
 "-NIeAhPHmWseKoH-tXhY": {
   "firebaseKey": "-NIeAhPHmWseKoH-tXhY",
@@ -31,12 +23,8 @@
   "phone_number": "(454) 3976605",
   "email": "jpostill2@cdc.gov",
   "order_type": "Online",
-  "item_name": "Jacquette",
-  "order_total": "",
-  "payment_type": "",
-  "tip_amount": "8.85",
   "uid":"",
-  "isFulfilled": "true"
+  "isFulfilled": true
 },
 "-NIeAhPK2yJcKWWJvj2s": {
   "firebaseKey": "-NIeAhPK2yJcKWWJvj2s",
@@ -44,12 +32,8 @@
   "phone_number": "(278) 5179809",
   "email": "rrontree3@meetup.com",
   "order_type": "In-Person",
-  "item_name": "Rowe",
-  "order_total": "",
-  "payment_type": "",
-  "tip_amount": "8.05",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 },
 "-NIeAhPPpi_0AtyuoCFR": {
   "firebaseKey": "-NIeAhPPpi_0AtyuoCFR",
@@ -57,11 +41,7 @@
   "phone_number": "(477) 5110147",
   "email": "clewcock4@blinklist.com",
   "order_type": "Mobile",
-  "item_name": "Coreen",
-  "order_total": "",
-  "payment_type": "",
-  "tip_amount": "18.57",
   "uid":"",
-  "isFulfilled": "false"
+  "isFulfilled": false
 }
 }

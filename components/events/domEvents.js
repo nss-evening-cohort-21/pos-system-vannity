@@ -3,7 +3,7 @@ import {
   deleteOrder, getOrders, getSingleOrder,
 } from '../../api/orderData';
 import { emptyOrders } from '../../pages/viewOrders';
-import showOrders from '../../pages/orders';
+import { showOrders } from '../../pages/orders';
 import closeOrder from '../forms/closeOrderForm';
 import viewRevenue from '../../pages/viewRevenue';
 import viewOrderDetails from '../../pages/viewOrderDetails';
@@ -33,8 +33,8 @@ const domEvents = (user) => {
     }
     if (e.target.id.includes('add-item-btn')) {
       console.warn('CLICKED addItemBtn', e.target.id);
-
-      addItemForm();
+      const [, firebaseKey] = e.target.id.split('--');
+      addItemForm({}, firebaseKey);
     }
     if (e.target.id.includes('edit-Item-btn')) {
       const [, firebaseKey] = e.target.id.split('--');

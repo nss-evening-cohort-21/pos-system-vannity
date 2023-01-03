@@ -1,10 +1,14 @@
-import { createOrder, getOrders, updateOrder } from '../../api/orderData';
+import {
+  createOrder, getOrders, updateOrder, getSingleOrder
+} from '../../api/orderData';
 import viewOrderDetails from '../../pages/viewOrderDetails';
-import showOrders from '../../pages/orders';
-import addItemForm from '../forms/addItemForm';
+import { showOrders } from '../../pages/orders';
+// import addItemForm from '../forms/addItemForm';
 // import closeOrder from '../forms/closeOrderForm';
-import { viewOrders } from '../../pages/viewOrders';
-import { getMenuNames } from '../../api/menuData';
+import {
+  createMenuName, getSingleMenuName, updateMenuName, getMenuByOrderId
+} from '../../api/menuData';
+import { getOrderDetails } from '../../api/mergeData';
 
 const formEvents = (user) => {
   document.querySelector('#main-container').addEventListener('submit', (e) => {
@@ -24,7 +28,7 @@ const formEvents = (user) => {
         const patchPayLoad = { firebaseKey: name };
 
         updateOrder(patchPayLoad).then(() => {
-          addItemForm(user.uid).then(viewOrders);
+          getOrders(user.uid).then(showOrders);
         });
       });
     }
@@ -44,17 +48,23 @@ const formEvents = (user) => {
       });
     }
 
-    if (e.target.id.includes('add-item-btn')) {
-      const [, firebaseKey] = e.target.id.split('--');
+    if (e.target.id.includes('submit-item')) {
       const payload = {
         name: document.querySelector('#name').value,
         price: document.querySelector('#price').value,
         description: document.querySelector('#description').value,
+        orderId: document.querySelector('#order-id').value,
         uid: user.uid,
-        firebaseKey,
       };
-      updateOrder(payload).then(() => {
-        getMenuNames(user.uid).then(viewOrderDetails);
+      createMenuName(payload).then(({ name }) => {
+        const patchPayload = { firebaseKey: name };
+        updateMenuName(patchPayload).then(() => {
+          getOrderDetails(payload.orderId).then((menuNameArray) => {
+            getSingleOrder(payload.orderId).then((orderObject) => {
+              viewOrderDetails(orderObject, menuNameArray);
+            });
+          });
+        });
       });
     }
     if (e.target.id.includes('edit-item-btn')) {
@@ -66,8 +76,14 @@ const formEvents = (user) => {
         uid: user.uid,
         firebaseKey,
       };
-      updateOrder(payload).then(() => {
-        getMenuNames(user.uid).then(viewOrderDetails);
+      updateMenuName(payload).then(() => {
+        getSingleMenuName(firebaseKey).then((item) => {
+          getSingleOrder(item.orderId).then((orderObject) => {
+            getMenuByOrderId(orderObject.firebaseKey).then((menuNameArray) => {
+              viewOrderDetails(orderObject.firebaseKey, menuNameArray);
+            });
+          });
+        });
       });
     }
   });

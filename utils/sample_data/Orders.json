@@ -6,7 +6,7 @@
   "email": "mcarlo0@nature.com",
   "order_type": "In-Person",
   "uid":"",
-  "isFulfilled": "true"
+  "isFulfilled": true
 },
 "-NIeAhPDVSFNmj1fV2pt": {
   "firebaseKey": "-NIeAhPDVSFNmj1fV2pt",

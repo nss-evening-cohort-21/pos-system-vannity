@@ -1,6 +1,6 @@
 import { getOrders } from '../../api/orderData';
 import homePage from '../../pages/homePage';
-import showOrders from '../../pages/orders';
+import { showOrders } from '../../pages/orders';
 import { emptyOrders } from '../../pages/viewOrders';
 import { signOut } from '../../utils/auth';
 import createOrderForm from '../forms/createOrderForm';

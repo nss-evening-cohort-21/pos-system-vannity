@@ -71,7 +71,7 @@ const updateOrder = (payload) => new Promise((resolve, reject) => {
 });
 
 const getOrderItems = (firebaseKey) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/menu.json?orderBy="order_id"&equalTo=${firebaseKey}`, {
+  fetch(`${endpoint}/menu.json?orderBy="orderId"&equalTo="${firebaseKey}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

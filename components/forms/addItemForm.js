@@ -1,7 +1,7 @@
 import clearDom from '../../utils/clearDom';
 import renderToDOM from '../../utils/renderToDom';
 
-const addItemForm = (obj = {}) => {
+const addItemForm = (obj = {}, orderId) => {
   clearDom();
   const domString = `
     <form id="${obj.firebaseKey ? `update-item--${obj.firebaseKey}` : 'submit-item'}" class="mb-4">
@@ -17,8 +17,9 @@ const addItemForm = (obj = {}) => {
       <label for="price">Item Price</label>
       <textarea type="number" class="form-control" placeholder="Item Price" id="price">${obj.price || ''}</textarea>
     </div>
-    <button type="submit" class="btn btn-primary" id="add-edit-item"> Create/Edit Item
+    <button type="submit" class="btn btn-primary"> Create/Edit Item
     </button>
+    <input type="hidden" id="order-id" value="${obj.orderId ? obj.orderId : orderId}"></input>
     </form>
     `;
   renderToDOM('#form-container', domString);
